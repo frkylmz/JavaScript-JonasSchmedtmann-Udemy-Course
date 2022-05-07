@@ -105,6 +105,7 @@ console.log(lastName);
 
 // Lesson 4 - Basic Operators
 
+/*
 const now = 2022;
 const ageFaruk = now - 1999;
 const ageOmer = now - 1995;
@@ -116,8 +117,11 @@ console.log(ageFaruk * 2, ageOmer / 10, 2 ** 3);
 const firstName = "Faruk";
 const lastName = "Yılmaz";
 console.log(firstName + ' ' + lastName); // added spaces (concatination)
+*/
 
 // Assignment Operator (=)
+
+/*
 let x = 10 + 5; // 15
 x += 10; // x = x + 10 = 25
 x += 4; // x = x * 4 = 100
@@ -132,3 +136,29 @@ console.log(ageOmer >= 18);
 const isFullage = ageOmer >= 18;
 
 console.log(now - 1995 > now - 1999);
+*/
+
+
+
+
+
+// Lesson 5 - Operator Precedence
+const now = 2022;
+const ageOmer = now - 1995;
+const ageFaruk = now - 1999;
+
+console.log(now - 1995 > now - 1999);
+
+console.log(25-10-5);
+
+let x, y;
+x = y = 25-10-5; // x = y = 10, x = 10
+console.log(x, y);
+
+const averageAge = (ageFaruk + ageOmer) / 2
+console.log(ageFaruk, ageOmer, averageAge);
+
+
+
+
+
