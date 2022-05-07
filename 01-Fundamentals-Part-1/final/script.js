@@ -1,4 +1,4 @@
-// Values and Variables
+// Lesson 1 - Values and Variables
 
 /*
 let js = "amazing";
@@ -31,7 +31,7 @@ console.log(myFirstJob);
 
 
 
-// Data Types
+// Lesson 2 - Data Types
 
 // Primitive
 // Number
@@ -53,7 +53,8 @@ console.log(myFirstJob);
 // Symbol (ES2015)
 
 // BigInt (ES2020)
-
+// -----------------------------------------------
+/*
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -73,3 +74,23 @@ year = 1991;
 console.log(typeof year); //number
 
 console.log(typeof null); //object
+*/
+
+
+
+// Lesson 3 - let(mutate variable, reassigned), const(cannot be changed, immutable(birthYear)) and var(old way, dont use it)
+
+let age = 30;
+age = 31;
+console.log(age);
+
+const birthYear = 1999;
+// birthYear = 2000;
+// const job;
+
+var job = "Programmer";
+job = "teacher";
+
+lastName = "Yılmaz";
+console.log(lastName);
+
