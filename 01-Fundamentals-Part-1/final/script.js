@@ -221,7 +221,7 @@ console.log(BMIMark, BMIJohn, markHigherBMI);
 
 
 // Lesson 6 - Strings and Template Literals
-
+/*
 const firstName = "Faruk";
 const job = "student";
 const birthYear = 1999;
@@ -242,3 +242,29 @@ lines");
 console.log(`String
 multiple
 lines`);
+*/
+
+
+
+
+
+// Lesson 7 if-else statements
+const age = 13;
+
+if(age >= 18) {
+    console.log("Faruk can start driving license");
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Faruk is too young. Wait another ${yearsLeft} years :)`);
+}
+
+
+const birthYear = 1999;
+
+let century;
+if(birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
