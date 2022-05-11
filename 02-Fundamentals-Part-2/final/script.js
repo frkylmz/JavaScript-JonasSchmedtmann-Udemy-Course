@@ -42,3 +42,24 @@ console.log(appleOrangeJuice);
 const num = Number("23");
 */
 
+
+
+
+
+// Lesson 2 Function declarations vs expression
+
+function calcAge1(birthYear){ //declaration
+    return 2037 - birthYear;
+}
+const age1 = calcAge1(1999);   //declarations'da hoisting vardır.
+
+
+
+
+const calcAge2 = function(birthYear) {      
+    return 2037 - birthYear;  //expression
+}
+const age2 = calcAge2(1999);
+console.log(age1, age2);
+
+// functions are value, we can store it in a variable.
