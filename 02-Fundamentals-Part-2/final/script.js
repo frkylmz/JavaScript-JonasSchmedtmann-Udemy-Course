@@ -89,15 +89,40 @@ const num = Number("23");
 
 // Lesson 4 Functions Calling Other Functions
 
-function cutFruitPieces(fruit) {
-    return fruit * 4;
+// function cutFruitPieces(fruit) {
+//     return fruit * 4;
+// }
+
+// function fruitProcessor(apples, oranges) {
+//     const applePieces = cutFruitPieces(apples);
+//     const orangePieces = cutFruitPieces(oranges)
+
+//     const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+//     return juice;
+// }
+// console.log(fruitProcessor(2, 3));
+
+
+
+
+
+// Lesson 5 Reviewing Functions
+
+const calcAge = function(birthYear) {
+    return 2037 - birthYear;
 }
 
-function fruitProcessor(apples, oranges) {
-    const applePieces = cutFruitPieces(apples);
-    const orangePieces = cutFruitPieces(oranges)
+const yearUntilRetirement = (birthYear, firstName) => {
+    const age = calcAge(birthYear)
+    const retirement = 65 - age; // 27
 
-    const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
-    return juice;
+    if(retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years`);
+        return retirement;
+    } else {
+        console.log(`${firstName} has already retired`);
+        return -1;
+    }
 }
-console.log(fruitProcessor(2, 3));
+console.log(yearUntilRetirement(1999, "Faruk"));
+console.log(yearUntilRetirement(1950, "Ömer"));
