@@ -69,17 +69,35 @@ const num = Number("23");
 
 
 // Lesson 3 Arrow Functions (expression function shorter)
-const calcAge3 = birthYear => 2037 - birthYear;
-const age3 = calcAge3(1999);
-console.log(age3);
+// const calcAge3 = birthYear => 2037 - birthYear;
+// const age3 = calcAge3(1999);
+// console.log(age3);
 
-const yearUntilRetirement = (birthYear, firstName) => {
-    const age = 2037 - birthYear; // 38
-    const retirement = 65 - age; // 27
-    // return retirement;
-    return `${firstName} retires in ${retirement} years`;
+// const yearUntilRetirement = (birthYear, firstName) => {
+//     const age = 2037 - birthYear; // 38
+//     const retirement = 65 - age; // 27
+//     // return retirement;
+//     return `${firstName} retires in ${retirement} years`;
+// }
+
+// console.log(yearUntilRetirement(1999, "Faruk"));
+// console.log(yearUntilRetirement(1995, "Ömer"));
+
+
+
+
+
+// Lesson 4 Functions Calling Other Functions
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
 }
 
-console.log(yearUntilRetirement(1999, "Faruk"));
-console.log(yearUntilRetirement(1995, "Ömer"));
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges)
 
+    const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+    return juice;
+}
+console.log(fruitProcessor(2, 3));
