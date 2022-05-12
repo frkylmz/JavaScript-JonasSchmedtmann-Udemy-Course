@@ -185,42 +185,87 @@ GOOD LUCK 😀
 
 
 // Lesson 6 Introduction to Arrays
-const friend1 = "Michael";
-const friend2 = "Steven";
-const friend3 = "Peter";
+// const friend1 = "Michael";
+// const friend2 = "Steven";
+// const friend3 = "Peter";
 
-const friends = ["Michael","Steven", "Peter"];
+// const friends = ["Michael","Steven", "Peter"];
+// console.log(friends);
+
+// const y = new Array(1991, 1984, 2008, 2020);
+// console.log(y);
+
+// console.log(friends[0]); // Michael
+// console.log(friends[2]); // Peter
+
+// console.log(friends.length); // 3
+// console.log(friends[friends.length - 1]); // Peter
+
+// friends[2] = "Faruk"
+// console.log(friends); // Michael, Steven, Faruk
+// // friends = ["Bob", "Alice"]
+
+// const firstName = "Faruk";
+// const faruk = ["firstname", "Yılmaz", 2037 - 1999, "sutdent", friends];
+// console.log(faruk);
+// console.log(faruk.length);
+
+// // Exercise
+// const calcAge = function(birthYear) {
+//     return 2037 - birthYear;
+// }
+
+// const years = [1990, 1967, 2002, 2010, 2018];
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
+
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+// console.log(ages);
+
+
+
+
+
+// Lesson 7 Basic Array Operations (Methods)
+// Add elements
+// push - end of
+const friends = ["Michael", "Steven", "Peter"];
+const newLength = friends.push("Jay");  // adds elements to the end of an array 
+console.log(friends);
+console.log(newLength);
+
+// unshift - beginning
+friends.unshift("John"); // add elements to the beginning of an array
 console.log(friends);
 
-const y = new Array(1991, 1984, 2008, 2020);
-console.log(y);
 
-console.log(friends[0]); // Michael
-console.log(friends[2]); // Peter
+// Remove elements
+// pop - last element
+friends.pop(); // Jay is gone
+const popped = friends.pop(); // Peter is gone
+console.log(popped);
+console.log(friends);
 
-console.log(friends.length); // 3
-console.log(friends[friends.length - 1]); // Peter
+// shift - first element
+friends.shift(); // John is gone
+console.log(friends); 
 
-friends[2] = "Faruk"
-console.log(friends); // Michael, Steven, Faruk
-// friends = ["Bob", "Alice"]
+console.log(friends.indexOf("Steven")); // index at which this element is located (1)
+console.log(friends.indexOf("Bob")); // -1
 
-const firstName = "Faruk";
-const faruk = ["firstname", "Yılmaz", 2037 - 1999, "sutdent", friends];
-console.log(faruk);
-console.log(faruk.length);
 
-// Exercise
-const calcAge = function(birthYear) {
-    return 2037 - birthYear;
+// return true if the element is in the array and false if it's not
+friends.push(23);
+console.log(friends.includes("Steven")); // true
+console.log(friends.includes("Bob")); // false
+console.log(friends.includes("23")); // false (coercion) "23" -> string, 23 -> number
+
+if(friends.includes("Steven")) {
+    console.log("You have a friend called Steven.");
 }
 
-const years = [1990, 1967, 2002, 2010, 2018];
 
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[1]);
-const age3 = calcAge(years[years.length - 1]);
-console.log(age1, age2, age3);
 
-const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
-console.log(ages);
