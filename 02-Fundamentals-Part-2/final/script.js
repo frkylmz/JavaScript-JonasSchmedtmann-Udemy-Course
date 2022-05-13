@@ -304,3 +304,24 @@ GOOD LUCK 😀
 
 
 
+// Lesson 8 Introduction to Objects
+const farukArray = [
+    "Faruk",
+    "Yılmaz",
+    2037 - 1999,
+    "student",
+    ["Michael", "Peter", "Steven"]
+];
+
+const faruk = {
+    firstName: "Faruk",
+    lastName: "Yılmaz",
+    age: 2037 - 1999,
+    job: "student",
+    friends: ["Michael", "Peter", "Steven"] // has 5 properties
+};
+
+
+
+
+
