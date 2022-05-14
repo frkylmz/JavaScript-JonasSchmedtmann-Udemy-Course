@@ -305,14 +305,27 @@ GOOD LUCK 😀
 
 
 // Lesson 8 Introduction to Objects
-const farukArray = [
-    "Faruk",
-    "Yılmaz",
-    2037 - 1999,
-    "student",
-    ["Michael", "Peter", "Steven"]
-];
+// const farukArray = [
+//     "Faruk",
+//     "Yılmaz",
+//     2037 - 1999,
+//     "student",
+//     ["Michael", "Peter", "Steven"]
+// ];
 
+// const faruk = {
+//     firstName: "Faruk",
+//     lastName: "Yılmaz",
+//     age: 2037 - 1999,
+//     job: "student",
+//     friends: ["Michael", "Peter", "Steven"] // has 5 properties
+// };
+
+
+
+
+
+// Lesson 9 Dot vs Bracket Notation
 const faruk = {
     firstName: "Faruk",
     lastName: "Yılmaz",
@@ -320,8 +333,33 @@ const faruk = {
     job: "student",
     friends: ["Michael", "Peter", "Steven"] // has 5 properties
 };
+console.log(faruk);
+
+console.log(faruk.lastName);
+console.log(faruk["lastName"]);
+
+const nameKey = "Name";
+console.log(faruk["first" + nameKey]);
+console.log(faruk["last" + nameKey]);
+
+// console.log(faruk."last" + nameKey); // unexpected string
+
+const interestedIn = prompt("What do you want to know about Faruk? Choose between firstName, lastName, age, job and friends");
+console.log(faruk[interestedIn]);
+
+if(faruk[interestedIn]) {
+    console.log(faruk[interestedIn]);
+} else {
+    console.log("Wrong request! Choose between firstName, lastName, age, job and friends");
+}
+
+faruk.location = "Turkey";
+faruk["twitter"] = "@faruk";
+console.log(faruk);
 
 
-
+// Challenge
+// "Faruk has 3 friends and his best friend called Michael"
+console.log(`${faruk.firstName} has ${faruk.friends.length} friends and his best friend called ${faruk.friends[0]}`);
 
 
