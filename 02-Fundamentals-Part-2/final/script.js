@@ -473,6 +473,63 @@ GOOD LUCK 😀
 
 
 // Lesson 12 Looping Arrays, Breaking and Continuing
+// const faruk = [
+//     "Faruk",
+//     "Yılmaz",
+//     2037 - 1999,
+//     "student",
+//     ["Michael", "Peter", "Steven"],
+//     true
+// ];
+
+// const types = [];
+
+// // console.log(faruk[0])
+// // console.log(faruk[1])
+// // ...
+// // console.log(faruk[4])
+// // faruk[5] does NOT exist
+
+// for(let i = 0; i < faruk.length; i++) {
+//     // Reading from faruk array
+//     console.log(faruk[i], typeof faruk[i]);
+
+//     // Filling types array
+//     // types[i] = typeof faruk[i];
+//     types.push(typeof faruk[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i]);
+// }
+// console.log(ages);
+
+// //  continue and break
+// console.log("--- ONLY STRINGS ---");
+// for(let i = 0; i < faruk.length; i++) {
+//     if(typeof faruk[i] !== "string") continue;
+
+//     console.log(faruk[i], typeof faruk[i]);
+// }
+
+
+// console.log("--- BREAK WITH NUMBER ---");
+// for(let i = 0; i < faruk.length; i++) {
+//     if(typeof faruk[i] === "number") break;
+
+//     console.log(faruk[i], typeof faruk[i]);
+// }
+
+
+
+
+
+// Lesson 13 Looping Backwards and Loops in Loops
 const faruk = [
     "Faruk",
     "Yılmaz",
@@ -482,47 +539,19 @@ const faruk = [
     true
 ];
 
-const types = [];
+// 0, 1, ..., 4
+// 4, 3, ..., 0
 
-// console.log(faruk[0])
-// console.log(faruk[1])
-// ...
-// console.log(faruk[4])
-// faruk[5] does NOT exist
-
-for(let i = 0; i < faruk.length; i++) {
-    // Reading from faruk array
-    console.log(faruk[i], typeof faruk[i]);
-
-    // Filling types array
-    // types[i] = typeof faruk[i];
-    types.push(typeof faruk[i]);
+for (let i = faruk.length - 1; i >= 0; i--) {
+    console.log(i, faruk[i]);
 }
 
-console.log(types);
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`Starting exercise ${exercise}`);
 
-const years = [1991, 2007, 1969, 2020];
-const ages = [];
-
-for (let i = 0; i < years.length; i++) {
-    ages.push(2037 - years[i]);
-}
-console.log(ages);
-
-//  continue and break
-console.log("--- ONLY STRINGS ---");
-for(let i = 0; i < faruk.length; i++) {
-    if(typeof faruk[i] !== "string") continue;
-
-    console.log(faruk[i], typeof faruk[i]);
-}
-
-
-console.log("--- BREAK WITH NUMBER ---");
-for(let i = 0; i < faruk.length; i++) {
-    if(typeof faruk[i] === "number") break;
-
-    console.log(faruk[i], typeof faruk[i]);
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+    }
 }
 
 
